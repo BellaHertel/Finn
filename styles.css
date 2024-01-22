@@ -1,0 +1,89 @@
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white-color: #faf7f7
+}
+
+body{
+  background: #381b83;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cabeca{
+  position: relative;
+  width: 400px;
+  height: 250px;
+  background: var(--white-color);
+  border-radius: 45% 45% 0 0/25% 25% 0 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cabeca::before, .cabeca::after{
+  content: "";
+  position: absolute;
+  background: inherit;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.cabeca::before{
+  width: 100px;
+  height: 310px;
+  border-radius: 50px 50px 0 0;
+  box-shadow: 300px 0 var(--white-color);
+}
+
+.cabeca::after{
+  width: 400px;
+  height: 80px;
+  background: var(--white-color);
+  bottom: -40px;
+  border-radius: 50%;
+}
+
+.rosto{
+  background: #e9bfb8;
+  border-radius: 50%;
+  width: 350px;
+  height: 200px;
+  transform: translateY(10%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.olhos{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+
+.olhos div{
+  width: 30px;
+  height: 30px;
+  background: black;
+  border-radius: 50%;
+}
+
+.boca{
+  background: transparent;
+  width: 120px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 10px black;
+}
